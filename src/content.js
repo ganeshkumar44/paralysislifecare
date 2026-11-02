@@ -152,6 +152,39 @@ export const exploreLinks = [
   { href: "/contact", label: "Contact Us" },
 ];
 
+export const teamMembers = [
+  {
+    name: "Dr. Meezing Brahma",
+    role: "Owner · BPT",
+    bio: "Owner of Paralysis Life Care. Supports physiotherapy and neuro-rehabilitation for children and adults.",
+  },
+  {
+    name: "Dr. Bhargav Bhattachargy",
+    role: "MPT",
+    bio: "Physiotherapist with a Master of Physiotherapy, supporting rehabilitation for children and adults.",
+  },
+  {
+    name: "Dr. Florence Basumatary",
+    role: "BPT",
+    bio: "Physiotherapist with a Bachelor of Physiotherapy, supporting everyday movement and participation.",
+  },
+  {
+    name: "Dr. Anjali Muchahary",
+    role: "BPT",
+    bio: "Physiotherapist with a Bachelor of Physiotherapy, working with children and adults at the clinic.",
+  },
+  {
+    name: "Dr. Bhargav",
+    role: "MPT Orthopaedic",
+    bio: "Physiotherapist with a Master of Physiotherapy in orthopaedics.",
+  },
+  {
+    name: "Dr. Dimpi Das",
+    role: "BPT",
+    bio: "Physiotherapist with a Bachelor of Physiotherapy, supporting rehabilitation at Paralysis Life Care.",
+  },
+];
+
 export const contactEmail = "meezingbrahma@paralysislifecare.com";
 export const openingHours = "Monday – Saturday, 9:00 AM – 6:00 PM";
 export const weeklyOff = "Sunday";

@@ -1,5 +1,7 @@
 import { Icon, Photo } from "../assets.jsx";
 import ProfileCard from "../components/ProfileCard";
+import { teamMembers } from "../content";
+
 const steps = [
   {
     title: "Listen first",
@@ -159,8 +161,7 @@ export default function About() {
             <p className="eyebrow">OUR TEAM</p>
             <h2 id="about-team-title">The people behind the care</h2>
             <p>
-              Meet the team through PLC-approved profiles. Names, qualifications and
-              specializations will be published only after verification.
+              Meet the physiotherapists who support children and adults at Paralysis Life Care.
             </p>
           </div>
           <a className="btn btn-outline" href="/team">
@@ -169,8 +170,8 @@ export default function About() {
           </a>
         </div>
         <div className="team-grid">
-          {[0, 1, 2].map((slot) => (
-            <ProfileCard key={slot} />
+          {teamMembers.map((member) => (
+            <ProfileCard member={member} key={member.name} />
           ))}
         </div>
       </section>

@@ -1,5 +1,6 @@
 import { Icon } from "../assets.jsx";
 import ProfileCard from "../components/ProfileCard";
+import { teamMembers } from "../content";
 
 const prompts = [
   {
@@ -42,12 +43,12 @@ export default function Team() {
       <section className="profiles" aria-labelledby="profiles-title">
         <div className="section-intro">
           <p className="eyebrow">OUR CARE TEAM</p>
-          <h2 id="profiles-title">Real people. Verified introductions.</h2>
+          <h2 id="profiles-title">The people who support care here.</h2>
           <p>The people who support rehabilitation for children and adults.</p>
         </div>
         <div className="team-grid">
-          {[0, 1, 2].map((slot) => (
-            <ProfileCard detailed key={slot} />
+          {teamMembers.map((member) => (
+            <ProfileCard detailed member={member} key={member.name} />
           ))}
         </div>
       </section>
