@@ -1,6 +1,16 @@
 export const navLinks = [
-  { href: "#top", label: "Home", active: true },
-  { href: "#about", label: "About Us", icon: "chevron-down", iconSize: 13 },
+  { href: "#top", label: "Home", page: "home" },
+  {
+    href: "#about",
+    label: "About Us",
+    icon: "chevron-down",
+    iconSize: 13,
+    pages: ["about", "team"],
+    children: [
+      { href: "#about", label: "About Us" },
+      { href: "#team", label: "Our Team" },
+    ],
+  },
   { href: "#services", label: "Services" },
   { href: "#gallery", label: "Gallery" },
   { href: "#faq", label: "FAQ" },
