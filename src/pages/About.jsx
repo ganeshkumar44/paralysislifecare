@@ -200,7 +200,7 @@ export default function About() {
             support.
           </p>
         </div>
-        <a className="btn btn-light" href="#footer-contact">
+        <a className="btn btn-light" href="#contact">
           Get in Touch
           <Icon name="arrow-up-right-dark" width={18} height={18} />
         </a>

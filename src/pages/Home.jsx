@@ -101,7 +101,7 @@ export default function Home() {
           </div>
         </section>
 
-        <section className="services" id="services" aria-labelledby="services-title">
+        <section className="services" aria-labelledby="services-title">
           <div className="section-head">
             <div className="section-intro">
               <p className="eyebrow">SUPPORT FOR DIFFERENT NEEDS</p>
@@ -118,7 +118,7 @@ export default function Home() {
           </div>
           <div className="service-grid">
             {services.map((service) => (
-              <article className="service-card" id={service.id} key={service.id}>
+              <article className="service-card" key={service.id}>
                 <div className="service-symbol">
                   <Icon name={service.icon} width={25} height={25} />
                 </div>
@@ -126,7 +126,7 @@ export default function Home() {
                   <h3>{service.title}</h3>
                   <p>{service.text}</p>
                 </div>
-                <a className="text-action" href="#contact">
+                <a className="text-action" href={`#${service.id}`}>
                   Learn More
                   <Icon name="arrow-right" width={18} height={18} />
                 </a>
@@ -221,7 +221,7 @@ export default function Home() {
           </div>
         </section>
 
-        <section className="gallery" id="gallery" aria-labelledby="gallery-title">
+        <section className="gallery" aria-labelledby="gallery-title">
           <div className="section-head">
             <div className="section-intro">
               <p className="eyebrow">SPACES, CONNECTIONS &amp; EVERYDAY MOMENTS</p>
@@ -273,7 +273,7 @@ export default function Home() {
           </div>
         </section>
 
-        <section className="cta" id="contact" aria-labelledby="contact-title">
+        <section className="cta" aria-labelledby="contact-title">
           <div className="cta-copy">
             <p className="eyebrow">HERE FOR YOUR NEXT STEP</p>
             <h2 id="contact-title">Every Journey Deserves the Right Support</h2>
@@ -282,7 +282,7 @@ export default function Home() {
               support.
             </p>
           </div>
-          <a className="btn btn-light" href="#footer-contact">
+          <a className="btn btn-light" href="#contact">
             Get in Touch
             <Icon name="arrow-up-right-dark" width={18} height={18} />
           </a>
