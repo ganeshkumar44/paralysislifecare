@@ -171,10 +171,7 @@ export default function Home() {
           <div className="gallery-grid">
             {galleryItems.map((item) => (
               <article className={`gallery-card gallery-card--${item.variant}`} key={item.title}>
-                <div className="portrait-body">
-                  <Icon name="image" width={40} height={40} />
-                  <strong>{item.title}</strong>
-                </div>
+                <Photo file={item.image} width={item.width} height={item.height} alt={item.alt} />
               </article>
             ))}
           </div>

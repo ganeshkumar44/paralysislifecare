@@ -105,9 +105,30 @@ export const featureRows = [
 ];
 
 export const galleryItems = [
-  { title: "Clinic photograph", variant: "feature" },
-  { title: "Physiotherapy photograph", variant: "mid" },
-  { title: "Activities photograph", variant: "short" },
+  {
+    title: "Our care team",
+    variant: "feature",
+    image: "gallery-team.jpg",
+    width: 1024,
+    height: 647,
+    alt: "The Paralysis Life Care team standing together with a visitor in the clinic.",
+  },
+  {
+    title: "Physiotherapy session",
+    variant: "mid",
+    image: "gallery-physiotherapy.jpg",
+    width: 710,
+    height: 1024,
+    alt: "A therapist seated beside a child during a physiotherapy session, supporting the child as they stand.",
+  },
+  {
+    title: "Time with families",
+    variant: "short",
+    image: "gallery-families.jpg",
+    width: 768,
+    height: 1024,
+    alt: "Therapists standing with two children and a family member in the clinic.",
+  },
 ];
 
 export const stories = [
