@@ -134,7 +134,10 @@ export default function Contact() {
           </p>
           <label className="consent">
             <input name="privacy" type="checkbox" required />
-            <span>I agree to be contacted about my enquiry and have read the Privacy Policy.</span>
+            <span>
+              I agree to be contacted about my enquiry and have read the{" "}
+              <a href="#privacy">Privacy Policy</a>.
+            </span>
           </label>
           <button className="btn btn-primary" type="submit">
             Submit Enquiry

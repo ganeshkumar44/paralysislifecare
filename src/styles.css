@@ -2869,3 +2869,324 @@ a {
     height: 310px;
   }
 }
+
+.faq-layout,
+.legal-layout {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  padding: 88px var(--page-pad);
+}
+
+.faq-board,
+.legal-board {
+  display: flex;
+  align-items: flex-start;
+  gap: 64px;
+}
+
+.legal-board {
+  gap: 100px;
+}
+
+.faq-nav,
+.legal-nav {
+  display: flex;
+  flex-direction: column;
+  flex: none;
+  gap: 10px;
+  min-width: 0;
+}
+
+.faq-nav {
+  width: 264px;
+}
+
+.legal-nav {
+  width: 280px;
+  gap: 22px;
+  position: sticky;
+  top: 120px;
+}
+
+.faq-nav > p,
+.legal-nav > p:first-child,
+.faq-heading span,
+.legal-doc article > p:first-child {
+  margin: 0;
+  color: var(--green-mid);
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 1.3px;
+}
+
+.topic-link,
+.legal-nav a {
+  color: var(--green);
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1.5;
+  text-decoration: none;
+}
+
+.topic-link {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  padding: 18px 16px;
+  border-radius: 8px;
+  background: var(--mist);
+}
+
+.topic-link span {
+  flex: 1;
+}
+
+.topic-link.is-active {
+  background: var(--mint);
+}
+
+.legal-nav a {
+  font-weight: 400;
+  line-height: 1.6;
+}
+
+.legal-nav hr {
+  width: 100%;
+  height: 1px;
+  margin: 0;
+  border: 0;
+  background: var(--line);
+}
+
+.legal-status {
+  margin: 0;
+  color: var(--muted);
+  font-size: 13px;
+  line-height: 1.8;
+}
+
+.topic-help {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 16px;
+  padding-top: 28px;
+}
+
+.topic-help h2,
+.faq-heading h2,
+.legal-doc h2 {
+  margin: 0;
+  color: var(--ink);
+  font-weight: 600;
+  letter-spacing: -0.4px;
+  line-height: 1.25;
+}
+
+.topic-help h2 {
+  font-size: 20px;
+}
+
+.topic-help p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 14px;
+  line-height: 1.7;
+}
+
+.faq-groups {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  gap: 64px;
+  min-width: 0;
+}
+
+.faq-groups section,
+.legal-doc article,
+.legal-close {
+  scroll-margin-top: 120px;
+}
+
+.faq-heading {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 20px;
+}
+
+.faq-heading h2,
+.legal-doc h2 {
+  font-size: 26px;
+}
+
+.faq-groups section {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.faq-item {
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  background: var(--white);
+}
+
+.faq-item.is-open {
+  background: var(--mist);
+}
+
+.faq-item.is-open button {
+  padding-bottom: 0;
+}
+
+.faq-item button {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  width: 100%;
+  padding: 24px;
+  border: 0;
+  background: transparent;
+  color: var(--ink);
+  font: inherit;
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 1.5;
+  text-align: left;
+  cursor: pointer;
+}
+
+.faq-item button span {
+  flex: 1;
+}
+
+.faq-item p {
+  margin: 16px 0 0;
+  padding: 0 24px 24px;
+  color: var(--muted);
+  font-size: 16px;
+  line-height: 1.7;
+}
+
+.legal-doc {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  gap: 40px;
+  min-width: 0;
+  max-width: 680px;
+}
+
+.legal-doc article {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.legal-doc article p,
+.legal-close p {
+  margin: 0;
+  padding: 0;
+  color: var(--muted);
+  font-size: 16px;
+  line-height: 1.7;
+}
+
+.legal-close {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 16px;
+  padding: 24px;
+  border-radius: 14px;
+  background: var(--mint);
+}
+
+.legal-close h2 {
+  font-size: 20px;
+}
+
+.legal-close p {
+  color: var(--green);
+  font-size: 14px;
+}
+
+.faq-urgent p {
+  font-size: 14px;
+}
+
+.consent a {
+  color: var(--green);
+  font-weight: 600;
+}
+
+@media (max-width: 1280px) {
+  .faq-nav,
+  .legal-nav,
+  .legal-doc {
+    width: auto;
+    flex: 0 1 auto;
+  }
+
+  .faq-nav {
+    flex-basis: 264px;
+  }
+
+  .legal-nav {
+    flex-basis: 280px;
+  }
+
+  .legal-doc {
+    flex-basis: 680px;
+  }
+}
+
+@media (max-width: 768px) {
+  .faq-layout,
+  .legal-layout {
+    gap: 32px;
+    padding: 72px 40px;
+  }
+
+  .faq-board,
+  .legal-board {
+    flex-direction: column;
+    gap: 32px;
+  }
+
+  .faq-nav,
+  .legal-nav,
+  .legal-doc {
+    width: 100%;
+    max-width: none;
+    flex: none;
+  }
+
+  .legal-nav {
+    position: static;
+  }
+
+  .faq-heading h2,
+  .legal-doc h2,
+  .topic-help h2 {
+    letter-spacing: -0.7px;
+  }
+}
+
+@media (max-width: 390px) {
+  .faq-layout,
+  .legal-layout {
+    padding: 56px 20px;
+  }
+
+  .faq-item button {
+    font-size: 16px;
+  }
+
+  .faq-heading h2,
+  .legal-doc h2 {
+    font-size: 22px;
+  }
+}

@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 
-const pages = new Set(["about", "team", "services", "gallery", "contact"]);
+const pages = new Set(["about", "team", "services", "gallery", "contact", "faq", "terms", "privacy"]);
 const serviceIds = new Set([
   "pediatric",
   "cerebral-palsy",
@@ -14,6 +14,9 @@ function readRoute() {
   const hash = window.location.hash.replace(/^#/, "");
   if (pages.has(hash)) return { page: hash, hash };
   if (serviceIds.has(hash)) return { page: "services", hash };
+  if (hash.startsWith("faq-")) return { page: "faq", hash };
+  if (hash.startsWith("terms-")) return { page: "terms", hash };
+  if (hash.startsWith("privacy-")) return { page: "privacy", hash };
   return { page: "home", hash: hash || "top" };
 }
 
@@ -30,8 +33,9 @@ export function useRoute() {
     const scrolling = document.documentElement;
     const previous = scrolling.style.scrollBehavior;
     scrolling.style.scrollBehavior = "auto";
+    const anchored = route.page === "services" || route.page === "faq" || route.page === "terms" || route.page === "privacy";
     const section =
-      route.page === "services" && route.hash !== "services"
+      anchored && route.hash !== route.page
         ? document.getElementById(route.hash)
         : route.page === "home" && route.hash && route.hash !== "top"
           ? document.getElementById(route.hash)
@@ -45,6 +49,9 @@ export function useRoute() {
       services: "Services • Paralysis Life Care",
       gallery: "Gallery • Paralysis Life Care",
       contact: "Contact Us • Paralysis Life Care",
+      faq: "FAQ • Paralysis Life Care",
+      terms: "Terms & Conditions • Paralysis Life Care",
+      privacy: "Privacy Policy • Paralysis Life Care",
     };
     document.title = titles[route.page] || "Paralysis Life Care";
   }, [route]);

@@ -49,8 +49,8 @@ export default function Footer() {
       <div className="legal" id="legal">
         <p>© 2026 Paralysis Life Care. All rights reserved.</p>
         <div className="legal-links">
-          <a href="#legal">Terms &amp; Conditions</a>
-          <a href="#legal">Privacy Policy</a>
+          <a href="#terms">Terms &amp; Conditions</a>
+          <a href="#privacy">Privacy Policy</a>
         </div>
         <p className="legal-note">Design concept • Content approval pending</p>
       </div>
