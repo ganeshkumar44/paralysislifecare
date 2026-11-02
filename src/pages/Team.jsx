@@ -29,16 +29,12 @@ export default function Team() {
             Meet the people who will support your journey.
           </h1>
           <p className="page-lead">
-            Care begins with a human connection. This page is reserved for verified introductions
-            to the people behind Paralysis Life Care.
+            Care begins with a human connection. Meet the people behind Paralysis Life Care.
           </p>
         </div>
         <aside className="page-note">
           <span className="accent-rule" aria-hidden="true" />
-          <p>
-            Names, portraits and professional details are awaiting PLC approval. No staff
-            identities or credentials have been invented.
-          </p>
+          <p>Physiotherapy and neuro-rehabilitation support for children and adults.</p>
           <p className="page-sign">PARALYSIS LIFE CARE</p>
         </aside>
       </section>
@@ -47,18 +43,8 @@ export default function Team() {
         <div className="section-intro">
           <p className="eyebrow">OUR CARE TEAM</p>
           <h2 id="profiles-title">Real people. Verified introductions.</h2>
-          <p>
-            The following are structured profile placeholders, not current staff listings. Each
-            profile will be completed with PLC-approved information and a consented portrait.
-          </p>
+          <p>The people who support rehabilitation for children and adults.</p>
         </div>
-        <p className="notice">
-          <Icon name="info" width={18} height={18} />
-          <span>
-            Publication hold • All profile photographs, names, designations, qualifications,
-            specializations and biographies must be supplied and verified by PLC.
-          </span>
-        </p>
         <div className="team-grid">
           {[0, 1, 2].map((slot) => (
             <ProfileCard detailed key={slot} />
@@ -72,7 +58,7 @@ export default function Team() {
           <h2 id="questions-title">It’s okay to ask questions about your care.</h2>
           <p>
             Understanding who may support you is an important part of choosing a service. The PLC
-            team can help clarify details once verified information is available.
+            team can help you talk through your questions.
           </p>
         </div>
         <div className="prompt-list">
@@ -88,15 +74,6 @@ export default function Team() {
         </div>
       </section>
 
-      <section className="transparency">
-        <h2>A note on transparency</h2>
-        <p>
-          Team composition, professional registrations where applicable, availability and
-          individual service responsibilities are not yet confirmed for this design. Please
-          contact PLC for verified information before making care decisions.
-        </p>
-      </section>
-
       <section className="cta" aria-labelledby="team-contact-title">
         <div className="cta-copy">
           <p className="eyebrow">HERE FOR YOUR NEXT STEP</p>
@@ -106,7 +83,7 @@ export default function Team() {
             support.
           </p>
         </div>
-        <a className="btn btn-light" href="#contact">
+        <a className="btn btn-light" href="/contact">
           Get in Touch
           <Icon name="arrow-up-right-dark" width={18} height={18} />
         </a>

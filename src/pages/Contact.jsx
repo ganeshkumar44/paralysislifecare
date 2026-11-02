@@ -1,12 +1,11 @@
 import { useState } from "react";
 import { Icon } from "../assets.jsx";
-import { services } from "../content";
+import { contactEmail, openingHours, services, weeklyOff } from "../content";
 
 const details = [
-  { icon: "mail", title: "Email address", text: "Awaiting PLC-confirmed email address" },
-  { icon: "map-pin", title: "Clinic address", text: "Awaiting PLC-verified address and location" },
-  { icon: "clock", title: "Opening hours", text: "Awaiting confirmed days and consultation hours" },
-  { icon: "globe", title: "Social profiles", text: "Awaiting verified PLC social links" },
+  { icon: "mail", title: "Email address", text: contactEmail, href: `mailto:${contactEmail}` },
+  { icon: "clock", title: "Opening hours", text: openingHours },
+  { icon: "clock", title: "Weekly off", text: weeklyOff },
 ];
 
 export default function Contact() {
@@ -44,16 +43,12 @@ export default function Contact() {
         <div className="contact-info">
           <div className="phone-block">
             <h2 id="listen-title">We’re here to listen.</h2>
-            <p>
-              Use these supplied phone details once confirmed, or leave a general enquiry for the
-              team.
-            </p>
+            <p>Call us, or leave a general enquiry for the team.</p>
             <div className="phone-card">
               <Icon name="phone" width={26} height={26} />
               <div>
                 <a href="tel:6000511473">6000511473</a>
                 <a href="tel:6003873792">6003873792</a>
-                <p>Supplied numbers • Verify before publishing</p>
               </div>
             </div>
           </div>
@@ -63,18 +58,10 @@ export default function Contact() {
                 <Icon name={detail.icon} width={22} height={22} />
                 <div>
                   <h3>{detail.title}</h3>
-                  <p>{detail.text}</p>
+                  {detail.href ? <a href={detail.href}>{detail.text}</a> : <p>{detail.text}</p>}
                 </div>
               </div>
             ))}
-          </div>
-          <div className="map-placeholder">
-            <Icon name="map-pin-lg" width={36} height={36} />
-            <p>Verified map pending</p>
-            <p>
-              A map will be added after PLC confirms the address, location pin and embed privacy
-              requirements.
-            </p>
           </div>
         </div>
 
@@ -82,8 +69,7 @@ export default function Contact() {
           <div className="enquiry-intro">
             <h2>Send an enquiry</h2>
             <p>
-              Fields marked * are required in the proposed form. An enquiry is not a confirmed
-              appointment; availability must be agreed with PLC.
+              Fields marked * are required. An enquiry is not a confirmed appointment.
             </p>
           </div>
           <label className="field">
@@ -112,14 +98,12 @@ export default function Contact() {
                 </option>
               ))}
             </select>
-            <small>Listed care areas are pending PLC confirmation.</small>
           </label>
           <label className="field">
             <span>Preferred Location</span>
             <select name="location" defaultValue="" disabled>
               <option value="">Select a preferred location</option>
             </select>
-            <small>Location options will be added after PLC verification.</small>
           </label>
           <label className="field">
             <span>Message</span>
@@ -136,18 +120,14 @@ export default function Contact() {
             <input name="privacy" type="checkbox" required />
             <span>
               I agree to be contacted about my enquiry and have read the{" "}
-              <a href="#privacy">Privacy Policy</a>.
+              <a href="/privacy">Privacy Policy</a>.
             </span>
           </label>
           <button className="btn btn-primary" type="submit">
             Submit Enquiry
             <Icon name="arrow-up-right" width={18} height={18} />
           </button>
-          <p className="form-note">
-            {sent
-              ? "This preview keeps your enquiry in the browser only. Form processing is not connected until PLC confirms it."
-              : "Static design only. Form processing, consent wording, required fields and the Privacy Policy must be confirmed before launch."}
-          </p>
+          {sent ? <p className="form-note">Thank you for your enquiry.</p> : null}
         </form>
       </section>
 

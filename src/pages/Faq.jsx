@@ -1,8 +1,7 @@
 import { useState } from "react";
 import { Icon } from "../assets.jsx";
 
-const pending =
-  "Approved wording for this question has not been supplied yet. Please confirm the details directly with PLC.";
+const pending = "Contact Paralysis Life Care and the team will help with this question.";
 
 const topics = [
   {
@@ -13,7 +12,7 @@ const topics = [
       {
         question: "What is Paralysis Life Care?",
         answer:
-          "PLC is presented here as a pediatric and adult physiotherapy and neuro-rehabilitation care organization. Its services, team details and locations are awaiting verification. Contact PLC for confirmed information before making a care decision.",
+          "Paralysis Life Care offers physiotherapy and neuro-rehabilitation support for children and adults. Contact the team to talk about the support that may be appropriate.",
       },
       { question: "Where is PLC located?", answer: pending },
       { question: "Is this website a source of medical advice?", answer: pending },
@@ -27,7 +26,7 @@ const topics = [
       {
         question: "How do I know which service may be appropriate?",
         answer:
-          "Start by discussing your concerns and any existing clinical advice with the team. An appropriate professional should assess individual needs before recommending a service. The listed care areas are draft and subject to PLC confirmation.",
+          "Start by discussing your concerns and any existing clinical advice with the team. An appropriate professional should assess individual needs before recommending a service.",
       },
       { question: "How long might rehabilitation take?", answer: pending },
       { question: "Can I ask about a service that is not listed?", answer: pending },
@@ -69,7 +68,7 @@ const topics = [
       {
         question: "Can adults enquire about neurological rehabilitation?",
         answer:
-          "Adults may ask about the proposed neurological, stroke and spinal cord injury rehabilitation services. Availability, suitability and clinical scope require PLC confirmation and an appropriate assessment. Existing medical advice should continue to guide care.",
+          "Adults may ask about neurological, stroke and spinal cord injury rehabilitation. The right support depends on an assessment, and existing medical advice should continue to guide care.",
       },
       { question: "Can rehabilitation support everyday activities?", answer: pending },
       { question: "Can a family member help with my enquiry?", answer: pending },
@@ -81,7 +80,8 @@ const firstOpen = topics.map((topic) => `${topic.id}-0`);
 
 export default function Faq() {
   const [open, setOpen] = useState(() => new Set(firstOpen));
-  const [active, setActive] = useState("faq-general");
+  const topicSlug = window.location.pathname.split("/").filter(Boolean)[1];
+  const active = topicSlug ? `faq-${topicSlug}` : "faq-general";
 
   const toggle = (id) => {
     setOpen((current) => {
@@ -102,7 +102,7 @@ export default function Faq() {
           </h1>
           <p className="page-lead">
             Find general guidance about rehabilitation enquiries, appointments and care for
-            children and adults. Every answer below is a draft pending PLC review.
+            children and adults.
           </p>
         </div>
         <div className="page-note">
@@ -119,23 +119,14 @@ export default function Faq() {
         <h2 className="visually-hidden" id="faq-topics">
           Questions by topic
         </h2>
-        <p className="notice">
-          <Icon name="info" width={18} height={18} />
-          <span>
-            Review required • These are cautious draft answers, not confirmed PLC policies or
-            medical advice. Verify clinical content, service availability and appointment
-            information before publication.
-          </span>
-        </p>
         <div className="faq-board">
           <nav className="faq-nav" aria-label="FAQ topics">
             <p>BROWSE BY TOPIC</p>
             {topics.map((topic) => (
               <a
                 className={active === topic.id ? "topic-link is-active" : "topic-link"}
-                href={`#${topic.id}`}
+                href={`/faq/${topic.id.replace(/^faq-/, "")}`}
                 key={topic.id}
-                onClick={() => setActive(topic.id)}
               >
                 <span>{topic.label}</span>
                 {active === topic.id ? <Icon name="arrow-right" width={18} height={18} /> : null}
@@ -144,7 +135,7 @@ export default function Faq() {
             <div className="topic-help">
               <h2>Need more guidance?</h2>
               <p>Our contact page is the place to ask a general question about available support.</p>
-              <a className="btn btn-outline" href="#contact">
+              <a className="btn btn-outline" href="/contact">
                 Contact Our Team
               </a>
             </div>
@@ -196,7 +187,7 @@ export default function Faq() {
             support.
           </p>
         </div>
-        <a className="btn btn-light" href="#contact">
+        <a className="btn btn-light" href="/contact">
           Get in Touch
           <Icon name="arrow-up-right-dark" width={18} height={18} />
         </a>

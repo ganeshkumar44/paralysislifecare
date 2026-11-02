@@ -33,7 +33,7 @@ export default function App() {
         Skip to content
       </a>
       <Header page={route.page} />
-      <main id="main">
+      <main id="main" tabIndex={-1}>
         <Page />
       </main>
       <Footer />

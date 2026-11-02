@@ -69,8 +69,8 @@ const sections = [
     number: "08",
     title: "Contact and future updates",
     paragraphs: [
-      "Questions about the website or these terms should be directed to PLC through a verified contact method. Supplied phone numbers: 6000511473 and 6003873792 — verify before publishing. The official email address and postal address are awaiting confirmation.",
-      "An effective date, revision date and process for communicating material changes should be added after professional review. Do not present this draft as an approved or legally reviewed policy.",
+      "Questions about the website or these terms can be sent to meezingbrahma@paralysislifecare.com, or by phone on 6000511473 and 6003873792.",
+      "The clinic is open Monday to Saturday, 9:00 AM to 6:00 PM. Sunday is the weekly off.",
     ],
   },
 ];
@@ -78,12 +78,12 @@ const sections = [
 export default function Terms() {
   return (
     <LegalPage
+      basePath="/terms"
       eyebrow="WEBSITE INFORMATION / LEGAL"
       title="Terms & Conditions"
       titleId="terms-title"
       lead="A clear starting point for understanding this website, general enquiries and the limits of online healthcare information."
-      note="Draft document only. Not approved legal advice or a finalized policy. Professional review is required before publication."
-      notice="Not for publication • Placeholder Terms & Conditions pending professional legal review, PLC approval and confirmation of operational policies."
+      note="These terms explain how this website and general enquiries are intended to be used."
       sections={sections}
     />
   );

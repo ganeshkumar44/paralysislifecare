@@ -1,12 +1,12 @@
 import { Icon } from "../assets.jsx";
 
 export default function LegalPage({
+  basePath,
   eyebrow,
   title,
   titleId,
   lead,
   note,
-  notice,
   sections,
 }) {
   return (
@@ -26,26 +26,14 @@ export default function LegalPage({
         </div>
       </section>
       <section className="legal-layout">
-        <p className="notice">
-          <Icon name="info" width={18} height={18} />
-          <span>{notice}</span>
-        </p>
         <div className="legal-board">
           <nav className="legal-nav" aria-label="On this page">
             <p>ON THIS PAGE</p>
             {sections.map((section) => (
-              <a href={`#${section.id}`} key={section.id}>
+              <a href={`${basePath}/${section.id.replace(/^(terms|privacy)-/, "")}`} key={section.id}>
                 {section.number} {section.title}
               </a>
             ))}
-            <hr />
-            <p className="legal-status">
-              Status: Draft for review
-              <br />
-              Effective date: Not set
-              <br />
-              Last reviewed: Awaiting approval
-            </p>
           </nav>
           <div className="legal-doc">
             {sections.map((section) => (
@@ -63,7 +51,7 @@ export default function LegalPage({
                 Contact PLC through a verified channel. Official legal and privacy contact details
                 will be added after confirmation.
               </p>
-              <a className="btn btn-outline" href="#contact">
+              <a className="btn btn-outline" href="/contact">
                 Contact Us
                 <Icon name="arrow-up-right-dark" width={18} height={18} />
               </a>

@@ -1,12 +1,5 @@
 import { Icon, Photo } from "../assets.jsx";
-import {
-  featureRows,
-  galleryItems,
-  photoCaption,
-  principles,
-  services,
-  stories,
-} from "../content";
+import { featureRows, galleryItems, principles, services, stories } from "../content";
 export default function Home() {
   return (
     <>
@@ -19,11 +12,11 @@ export default function Home() {
               delivered with compassion, care, and a commitment to individual progress.
             </p>
             <div className="hero-actions">
-              <a className="btn btn-primary" href="#services">
+              <a className="btn btn-primary" href="/services">
                 Explore Our Services
                 <Icon name="arrow-up-right" width={18} height={18} />
               </a>
-              <a className="btn btn-outline" href="#contact">
+              <a className="btn btn-outline" href="/contact">
                 Contact Our Team
                 <Icon name="arrow-up-right-dark" width={18} height={18} />
               </a>
@@ -42,9 +35,8 @@ export default function Home() {
                   height={928}
                   alt="Adult and child sitting with a clinician on a therapy mat."
                 />
-              </div>
-              <figcaption className="photo-caption">{photoCaption}</figcaption>
-            </figure>
+            </div>
+          </figure>
             <aside className="care-note">
               <Icon name="sprout" width={28} height={28} />
               <p>
@@ -65,9 +57,8 @@ export default function Home() {
                   height={1024}
                   alt="Clinician seated with an adult during a rehabilitation conversation."
                 />
-              </div>
-              <figcaption className="photo-caption">{photoCaption}</figcaption>
-            </figure>
+            </div>
+          </figure>
           </div>
           <div className="intro-copy">
             <div className="section-intro">
@@ -87,14 +78,7 @@ export default function Home() {
                 </li>
               ))}
             </ul>
-            <p className="notice">
-              <Icon name="info" width={18} height={18} />
-              <span>
-                Care philosophy draft • Team experience and service details require PLC
-                verification.
-              </span>
-            </p>
-            <a className="btn btn-outline" href="#about">
+            <a className="btn btn-outline" href="/about">
               Learn More About Us
               <Icon name="arrow-up-right-dark" width={18} height={18} />
             </a>
@@ -111,7 +95,7 @@ export default function Home() {
                 and suitability should be discussed with the care team.
               </p>
             </div>
-            <a className="text-action" href="#services">
+            <a className="text-action" href="/services">
               Explore all services
               <Icon name="arrow-right" width={18} height={18} />
             </a>
@@ -126,20 +110,13 @@ export default function Home() {
                   <h3>{service.title}</h3>
                   <p>{service.text}</p>
                 </div>
-                <a className="text-action" href={`#${service.id}`}>
+                <a className="text-action" href={`/services/${service.id}`}>
                   Learn More
                   <Icon name="arrow-right" width={18} height={18} />
                 </a>
               </article>
             ))}
           </div>
-          <p className="notice">
-            <Icon name="info" width={18} height={18} />
-            <span>
-              Service list and descriptions are draft and pending PLC confirmation. Availability
-              and suitability require individual discussion.
-            </span>
-          </p>
         </section>
 
         <section className="philosophy" id="approach" aria-labelledby="approach-title">
@@ -164,10 +141,6 @@ export default function Home() {
                 </div>
               ))}
             </div>
-            <p className="approach-note">
-              Our proposed care approach is subject to PLC review. Specific disciplines and care
-              plans depend on individual assessment and availability.
-            </p>
           </div>
           <div className="philosophy-media">
             <figure className="photo-block">
@@ -178,46 +151,8 @@ export default function Home() {
                   height={1024}
                   alt="Two people seated together during a rehabilitation session, one using a wheelchair."
                 />
-              </div>
-              <figcaption className="photo-caption">{photoCaption}</figcaption>
-            </figure>
-          </div>
-        </section>
-
-        <section className="team" id="team-preview" aria-labelledby="team-title">
-          <div className="section-head">
-            <div className="section-intro">
-              <p className="eyebrow">THE HUMAN SIDE OF CARE</p>
-              <h2 id="team-title">Meet the People Behind the Care</h2>
-              <p>
-                A place to introduce the professionals who will support your journey. Verified team
-                profiles are being prepared for publication.
-              </p>
             </div>
-            <a className="btn btn-outline" href="#team">
-              Meet Our Team
-              <Icon name="arrow-up-right-dark" width={18} height={18} />
-            </a>
-          </div>
-          <div className="team-grid">
-            {[0, 1, 2].map((slot) => (
-              <article className="team-card" key={slot}>
-                <div className="portrait">
-                  <p className="portrait-status">APPROVAL REQUIRED</p>
-                  <div className="portrait-body">
-                    <Icon name="user-round" width={40} height={40} />
-                    <strong>Portrait awaiting approval</strong>
-                    <span>PLC-verified portrait to be supplied</span>
-                  </div>
-                  <p className="portrait-foot">No stock identity used</p>
-                </div>
-                <div className="profile-details">
-                  <p className="profile-kicker">PLC VERIFICATION PENDING</p>
-                  <h3>Full name awaiting approval</h3>
-                  <p>Designation to be confirmed by PLC</p>
-                </div>
-              </article>
-            ))}
+          </figure>
           </div>
         </section>
 
@@ -226,12 +161,9 @@ export default function Home() {
             <div className="section-intro">
               <p className="eyebrow">SPACES, CONNECTIONS &amp; EVERYDAY MOMENTS</p>
               <h2 id="gallery-title">A Glimpse Into Our Care</h2>
-              <p>
-                A future collection of consented photographs from PLC. Images will be shared only
-                after permission and content approval.
-              </p>
+              <p>Moments from the clinic, activities and the people who spend time here.</p>
             </div>
-            <a className="text-action" href="#gallery">
+            <a className="text-action" href="/gallery">
               View Full Gallery
               <Icon name="arrow-right" width={18} height={18} />
             </a>
@@ -239,13 +171,10 @@ export default function Home() {
           <div className="gallery-grid">
             {galleryItems.map((item) => (
               <article className={`gallery-card gallery-card--${item.variant}`} key={item.title}>
-                <p className="portrait-status">APPROVAL REQUIRED</p>
                 <div className="portrait-body">
                   <Icon name="image" width={40} height={40} />
                   <strong>{item.title}</strong>
-                  <span>Consented PLC image to be supplied</span>
                 </div>
-                <p className="portrait-foot">Consent, caption &amp; alt text pending</p>
               </article>
             ))}
           </div>
@@ -256,8 +185,7 @@ export default function Home() {
             <p className="eyebrow">VOICES TO BE SHARED WITH PERMISSION</p>
             <h2 id="stories-title">Stories of Care and Progress</h2>
             <p>
-              Every experience is personal. This space is reserved for stories shared voluntarily
-              and approved for publication.
+              Every experience is personal. Stories shared here come from people who choose to tell them.
             </p>
           </div>
           <div className="stories-grid">
@@ -282,7 +210,7 @@ export default function Home() {
               support.
             </p>
           </div>
-          <a className="btn btn-light" href="#contact">
+          <a className="btn btn-light" href="/contact">
             Get in Touch
             <Icon name="arrow-up-right-dark" width={18} height={18} />
           </a>

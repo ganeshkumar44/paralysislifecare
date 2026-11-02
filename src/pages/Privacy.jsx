@@ -4,7 +4,7 @@ const sections = [
   {
     id: "privacy-notice",
     number: "01",
-    title: "About this draft notice",
+    title: "About this notice",
     paragraphs: [
       "This Privacy Policy is a draft content framework for the Paralysis Life Care website. It must be checked against PLC’s actual data practices and applicable law before it is published. It does not claim that any tracking, storage or processing system is currently in use.",
       "The responsible legal entity, privacy contact and any legally required organizational details have not been supplied. These must be verified and added to the final notice. Effective date: not yet set.",
@@ -87,8 +87,8 @@ const sections = [
     number: "10",
     title: "Privacy contact and updates",
     paragraphs: [
-      "The verified privacy contact, official email address and postal address are awaiting PLC confirmation. Supplied phone numbers: 6000511473 and 6003873792 — verify before publishing and confirm whether they are suitable for privacy enquiries.",
-      "Add an approved effective date, revision information and any required process for communicating changes after the notice has been reviewed against actual practices and applicable law.",
+      "Privacy questions can be sent to meezingbrahma@paralysislifecare.com, or by phone on 6000511473 and 6003873792.",
+      "The clinic is open Monday to Saturday, 9:00 AM to 6:00 PM. Sunday is the weekly off.",
     ],
   },
 ];
@@ -96,12 +96,12 @@ const sections = [
 export default function Privacy() {
   return (
     <LegalPage
+      basePath="/privacy"
       eyebrow="WEBSITE INFORMATION / LEGAL"
       title="Privacy Policy"
       titleId="privacy-title"
-      lead="A transparent starting point for explaining how personal information may be handled. This draft must be matched to PLC’s actual practices and applicable law."
-      note="Draft document only. Not approved legal advice or a finalized policy. Professional review is required before publication."
-      notice="Not for publication • Draft Privacy Policy pending applicable-law review and verification of actual data collection, technology, sharing, security and retention practices."
+      lead="How personal information may be handled when you contact Paralysis Life Care."
+      note="This policy explains how enquiry details may be used."
       sections={sections}
     />
   );

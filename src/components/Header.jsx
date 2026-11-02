@@ -9,7 +9,7 @@ export default function Header({ page }) {
   return (
     <header className="site-header">
       <div className="header-bar">
-        <a className="brand" href="#top" onClick={close}>
+        <a className="brand" href="/" onClick={close}>
           <span className="brand-mark">PLC</span>
           <span className="brand-divider" aria-hidden="true" />
           <span className="brand-name">Paralysis Life Care</span>
@@ -64,12 +64,12 @@ export default function Header({ page }) {
               </div>
             );
           })}
-          <a className="btn btn-primary mobile-cta" href="#contact" onClick={close}>
+          <a className="btn btn-primary mobile-cta" href="/contact" onClick={close}>
             Book a Consultation
           </a>
         </nav>
         <div className="header-actions">
-          <a className="btn btn-primary header-cta" href="#contact">
+          <a className="btn btn-primary header-cta" href="/contact">
             Book a Consultation
           </a>
           <button

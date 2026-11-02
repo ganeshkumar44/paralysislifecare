@@ -1,4 +1,5 @@
-import { exploreLinks, services } from "../content";
+import { Icon } from "../assets.jsx";
+import { contactEmail, exploreLinks, services, weeklyOff } from "../content";
 
 export default function Footer() {
   return (
@@ -8,8 +9,7 @@ export default function Footer() {
           <p className="brand-mark">PLC</p>
           <p className="org-name">Paralysis Life Care</p>
           <p>Compassionate physiotherapy and neuro-rehabilitation support for children and adults.</p>
-          <p>Social profiles: awaiting verified links</p>
-          <a className="btn btn-primary footer-cta" href="#contact">
+          <a className="btn btn-primary footer-cta" href="/contact">
             Book a Consultation
           </a>
         </div>
@@ -28,31 +28,52 @@ export default function Footer() {
           <ul className="footer-list">
             {services.map((service) => (
               <li key={service.id}>
-                <a href={`#${service.id}`}>{service.title}</a>
+                <a href={`/services/${service.id}`}>{service.title}</a>
               </li>
             ))}
           </ul>
         </div>
         <div className="footer-contact" id="footer-contact">
           <h2>Let’s connect</h2>
-          <a className="phone-link" href="tel:6000511473">
-            6000511473
-          </a>
-          <a className="phone-link" href="tel:6003873792">
-            6003873792
-          </a>
-          <p className="fine-print">Phone numbers supplied by PLC. Verify before publishing.</p>
-          <p className="fine-print">Email, address &amp; hours awaiting confirmation.</p>
+          <ul className="connect-list">
+            <li>
+              <span className="connect-icon">
+                <Icon name="phone" width={18} height={18} />
+              </span>
+              <a href="tel:6000511473">60005 11473</a>
+            </li>
+            <li>
+              <span className="connect-icon">
+                <Icon name="phone" width={18} height={18} />
+              </span>
+              <a href="tel:6003873792">60038 73792</a>
+            </li>
+            <li>
+              <span className="connect-icon">
+                <Icon name="mail" width={18} height={18} />
+              </span>
+              <a href={`mailto:${contactEmail}`}>Email</a>
+            </li>
+            <li className="connect-hours">
+              <span className="connect-icon">
+                <Icon name="clock" width={18} height={18} />
+              </span>
+              <span>
+                <strong>Monday – Saturday</strong>
+                <span>9:00 AM – 6:00 PM</span>
+                <span>{weeklyOff} off</span>
+              </span>
+            </li>
+          </ul>
         </div>
       </div>
       <hr className="footer-rule" />
       <div className="legal" id="legal">
         <p>© 2026 Paralysis Life Care. All rights reserved.</p>
         <div className="legal-links">
-          <a href="#terms">Terms &amp; Conditions</a>
-          <a href="#privacy">Privacy Policy</a>
+          <a href="/terms">Terms &amp; Conditions</a>
+          <a href="/privacy">Privacy Policy</a>
         </div>
-        <p className="legal-note">Design concept • Content approval pending</p>
       </div>
     </footer>
   );

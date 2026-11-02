@@ -1,7 +1,5 @@
 import { Icon, Photo } from "../assets.jsx";
 import ProfileCard from "../components/ProfileCard";
-import { photoCaption } from "../content";
-
 const steps = [
   {
     title: "Listen first",
@@ -76,7 +74,6 @@ export default function About() {
                 alt="Clinician seated with an adult during a rehabilitation conversation."
               />
             </div>
-            <figcaption className="photo-caption">{photoCaption}</figcaption>
           </figure>
         </div>
         <div className="story-copy">
@@ -94,13 +91,6 @@ export default function About() {
             to make conversations about rehabilitation more approachable, helping individuals and
             families understand their options and ask informed questions.
           </p>
-          <p className="notice">
-            <Icon name="info" width={18} height={18} />
-            <span>
-              Organization story draft • PLC history, facilities, team and service availability
-              require verification.
-            </span>
-          </p>
         </div>
       </section>
 
@@ -112,7 +102,6 @@ export default function About() {
             To offer an individual-centered approach to rehabilitation, with compassion, clear
             communication and respect for the goals of each person and family.
           </p>
-          <p className="purpose-status">Proposed statement • Pending PLC approval</p>
         </article>
         <article className="purpose-card purpose-card--vision">
           <p className="eyebrow">OUR VISION</p>
@@ -121,7 +110,6 @@ export default function About() {
             To work towards a care environment where children and adults feel heard, supported and
             able to explore meaningful possibilities in daily life.
           </p>
-          <p className="purpose-status">Proposed statement • Pending PLC approval</p>
         </article>
       </section>
 
@@ -135,10 +123,6 @@ export default function About() {
               listen, reflect and adapt.
             </p>
           </div>
-          <p className="approach-footnote">
-            Illustrative care framework only. PLC will confirm its assessment and review process
-            before publication.
-          </p>
         </div>
         <ol className="steps">
           {steps.map((step, index) => (
@@ -179,7 +163,7 @@ export default function About() {
               specializations will be published only after verification.
             </p>
           </div>
-          <a className="btn btn-outline" href="#team">
+          <a className="btn btn-outline" href="/team">
             Meet Our Team
             <Icon name="arrow-up-right-dark" width={18} height={18} />
           </a>
@@ -200,7 +184,7 @@ export default function About() {
             support.
           </p>
         </div>
-        <a className="btn btn-light" href="#contact">
+        <a className="btn btn-light" href="/contact">
           Get in Touch
           <Icon name="arrow-up-right-dark" width={18} height={18} />
         </a>

@@ -1,20 +1,20 @@
 export const navLinks = [
-  { href: "#top", label: "Home", page: "home" },
+  { href: "/", label: "Home", page: "home" },
   {
-    href: "#about",
+    href: "/about",
     label: "About Us",
     icon: "chevron-down",
     iconSize: 13,
     pages: ["about", "team"],
     children: [
-      { href: "#about", label: "About Us" },
-      { href: "#team", label: "Our Team" },
+      { href: "/about", label: "About Us" },
+      { href: "/team", label: "Our Team" },
     ],
   },
-  { href: "#services", label: "Services", page: "services" },
-  { href: "#gallery", label: "Gallery", page: "gallery" },
-  { href: "#faq", label: "FAQ", page: "faq" },
-  { href: "#contact", label: "Contact Us", page: "contact" },
+  { href: "/services", label: "Services", page: "services" },
+  { href: "/gallery", label: "Gallery", page: "gallery" },
+  { href: "/faq", label: "FAQ", page: "faq" },
+  { href: "/contact", label: "Contact Us", page: "contact" },
 ];
 
 export const principles = [
@@ -82,7 +82,7 @@ export const services = [
       "Discussion of individual functional goals, daily routines and support needs following spinal cord injury. Any rehabilitation plan should be clinically appropriate and coordinated with existing care.",
     benefit:
       "People living with spinal cord injury may seek advice about rehabilitation priorities when medically appropriate. The nature of support depends on injury, health and personal circumstances.",
-    next: "Specific equipment, interventions and facilities are not confirmed for PLC.",
+    next: "Talk with the care team about the daily activities and support that matter to you.",
   },
   {
     id: "speech",
@@ -94,7 +94,7 @@ export const services = [
       "A discussion of communication concerns and possible assessment pathways. Any therapy approach should follow a qualified professional’s assessment and agreed individual goals.",
     benefit:
       "Children or adults with speech, language or communication concerns may wish to ask whether an appropriate assessment is available.",
-    next: "Speech therapy availability and the qualifications of the providing professional require PLC confirmation.",
+    next: "Ask the care team whether a communication assessment is available.",
   },
 ];
 
@@ -112,23 +112,25 @@ export const galleryItems = [
 
 export const stories = [
   {
-    title: "Awaiting an approved patient story",
-    text: "No testimonial is published here yet. Written consent and PLC review are required before adding any personal experience.",
+    title: "Patient stories",
+    text: "Personal experiences will be shared here when people choose to tell them.",
   },
   {
-    title: "Awaiting an approved family story",
-    text: "No testimonial is published here yet. Written consent and PLC review are required before adding any personal experience.",
+    title: "Family stories",
+    text: "Family experiences will be shared here when people choose to tell them.",
   },
 ];
 
 export const exploreLinks = [
-  { href: "#top", label: "Home" },
-  { href: "#about", label: "About Us" },
-  { href: "#team", label: "Our Team" },
-  { href: "#services", label: "Services" },
-  { href: "#gallery", label: "Gallery" },
-  { href: "#faq", label: "FAQ" },
-  { href: "#contact", label: "Contact Us" },
+  { href: "/", label: "Home" },
+  { href: "/about", label: "About Us" },
+  { href: "/team", label: "Our Team" },
+  { href: "/services", label: "Services" },
+  { href: "/gallery", label: "Gallery" },
+  { href: "/faq", label: "FAQ" },
+  { href: "/contact", label: "Contact Us" },
 ];
 
-export const photoCaption = "Illustrative image—not PLC staff or patients";
+export const contactEmail = "meezingbrahma@paralysislifecare.com";
+export const openingHours = "Monday – Saturday, 9:00 AM – 6:00 PM";
+export const weeklyOff = "Sunday";

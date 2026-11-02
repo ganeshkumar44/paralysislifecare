@@ -28,13 +28,10 @@ function Tile({ photo, onOpen }) {
   return (
     <article className="gallery-tile">
       <div className="gallery-placeholder" style={{ height: photo.height }}>
-        <p className="approval">APPROVAL REQUIRED</p>
         <div className="gallery-waiting">
           <Icon name="image" width={40} height={40} />
           <p>{photo.title}</p>
-          <p>Consented PLC image to be supplied</p>
         </div>
-        <p className="pending-note">Consent, caption &amp; alt text pending</p>
       </div>
       <div className="gallery-meta">
         <span>{photo.category}</span>
@@ -75,16 +72,12 @@ export default function Gallery() {
             A glimpse into care, shared with permission.
           </h1>
           <p className="page-lead">
-            A space for moments from PLC’s care environment, activities and team. Every photograph
-            will need consent and approval before it becomes part of this collection.
+            Moments from the clinic, activities and the people who spend time here.
           </p>
         </div>
         <div className="page-note">
           <span className="accent-rule" />
-          <p>
-            No PLC photographs have been supplied. All gallery tiles are explicit
-            approval-required placeholders.
-          </p>
+          <p>Photographs from everyday care at Paralysis Life Care.</p>
           <p className="page-sign">PARALYSIS LIFE CARE</p>
         </div>
       </section>
@@ -106,13 +99,6 @@ export default function Gallery() {
             </button>
           ))}
         </div>
-        <p className="notice">
-          <Icon name="info" width={18} height={18} />
-          <span>
-            Photo approval required • Use only consented PLC images. Verify subject permissions,
-            captions, alt text and the intended use of each image before publication.
-          </span>
-        </p>
         {filter === "All" ? (
           <div className="gallery-board">
             {columns.map((column, columnIndex) => (
@@ -135,13 +121,10 @@ export default function Gallery() {
       <section className="lightbox-specimen" aria-labelledby="lightbox-title">
         <p className="eyebrow">IMAGE VIEWING / STATIC STATE</p>
         <h2 id="lightbox-title">A closer look, with context.</h2>
-        <p className="specimen-lead">
-          The specimen below shows the intended open-gallery state. It does not open or navigate in
-          this static design.
-        </p>
+        <p className="specimen-lead">Open a photograph to see it with its caption.</p>
         <div className="lightbox-frame">
           <div className="lightbox-bar">
-            <p>STATIC LIGHTBOX PREVIEW</p>
+            <p>CLINIC PHOTOGRAPH</p>
             <span className="lightbox-close" aria-hidden="true">
               <Icon name="close" width={22} height={22} />
             </span>
@@ -152,47 +135,37 @@ export default function Gallery() {
             </span>
             <div className="lightbox-stage">
               <div className="gallery-placeholder" style={{ height: 330 }}>
-                <p className="approval">APPROVAL REQUIRED</p>
                 <div className="gallery-waiting">
                   <Icon name="image" width={40} height={40} />
                   <p>Clinic photograph</p>
-                  <p>Consented PLC image to be supplied</p>
                 </div>
-                <p className="pending-note">Consent, caption &amp; alt text pending</p>
               </div>
               <div className="lightbox-caption">
                 <div>
-                  <h3>PLC image caption awaiting approval</h3>
-                  <p>
-                    Consented photograph, descriptive alt text and publication permission to be
-                    supplied.
-                  </p>
+                  <h3>Clinic photograph</h3>
+                  <p>A moment from everyday care at Paralysis Life Care.</p>
                 </div>
-                <span>Preview only</span>
               </div>
             </div>
             <span className="lightbox-nav" aria-hidden="true">
               <Icon name="arrow-right" width={18} height={18} />
             </span>
           </div>
-          <p className="lightbox-hint">
-            Implementation: Escape closes • Arrow keys navigate • Focus stays within the dialog
-          </p>
         </div>
       </section>
 
       <section className="consent-points" aria-label="Gallery consent principles">
         <article>
           <h2>Permission comes first</h2>
-          <p>Only images with appropriate consent and approved usage should be published.</p>
+          <p>Photographs are shared with the permission of the people in them.</p>
         </article>
         <article>
           <h2>Privacy is respected</h2>
-          <p>Avoid visible records, identifying details or sensitive information in the background.</p>
+          <p>Care stays personal, and private details stay out of the pictures.</p>
         </article>
         <article>
           <h2>Context matters</h2>
-          <p>Use descriptive captions and alt text without identifying people unless expressly approved.</p>
+          <p>Each photograph is shown with a short description of the moment.</p>
         </article>
       </section>
 
@@ -205,7 +178,7 @@ export default function Gallery() {
             support.
           </p>
         </div>
-        <a className="btn btn-light" href="#contact">
+        <a className="btn btn-light" href="/contact">
           Get in Touch
           <Icon name="arrow-up-right-dark" width={18} height={18} />
         </a>
@@ -217,9 +190,8 @@ export default function Gallery() {
             Close preview
             <Icon name="close" width={22} height={22} />
           </button>
-          <p className="lightbox-dialog-kicker">APPROVAL REQUIRED</p>
           <h2>{visible[active].title}</h2>
-          <p>Consented PLC image to be supplied. This preview does not publish a photograph.</p>
+          <p>{visible[active].category}</p>
           <div className="lightbox-dialog-nav">
             <button
               type="button"
