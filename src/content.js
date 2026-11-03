@@ -156,31 +156,37 @@ export const teamMembers = [
   {
     name: "Dr. Meezing Brahma",
     role: "Owner · BPT",
+    image: "team-meezing.jpg",
     bio: "Owner of Paralysis Life Care. Supports physiotherapy and neuro-rehabilitation for children and adults.",
   },
   {
     name: "Dr. Bhargav Bhattachargy",
     role: "MPT",
+    image: "team-bhargav.jpg",
     bio: "Physiotherapist with a Master of Physiotherapy, supporting rehabilitation for children and adults.",
   },
   {
     name: "Dr. Florence Basumatary",
     role: "BPT",
+    image: "team-florence.jpg",
     bio: "Physiotherapist with a Bachelor of Physiotherapy, supporting everyday movement and participation.",
   },
   {
     name: "Dr. Anjali Muchahary",
     role: "BPT",
+    image: "team-anjali.jpg",
     bio: "Physiotherapist with a Bachelor of Physiotherapy, working with children and adults at the clinic.",
   },
   {
-    name: "Dr. Bhargav",
-    role: "MPT Orthopaedic",
-    bio: "Physiotherapist with a Master of Physiotherapy in orthopaedics.",
+    name: "Dr. Sarang Diganta Das",
+    role: "Physiotherapist",
+    image: "team-sarang.jpg",
+    bio: "Supports physiotherapy and rehabilitation for children and adults at Paralysis Life Care.",
   },
   {
     name: "Dr. Dimpi Das",
     role: "BPT",
+    image: "team-dimpi.jpg",
     bio: "Physiotherapist with a Bachelor of Physiotherapy, supporting rehabilitation at Paralysis Life Care.",
   },
 ];
